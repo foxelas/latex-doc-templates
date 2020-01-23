@@ -1,4 +1,4 @@
-# GraduationThesisTemplate
+# Graduation Thesis Template
 Just a LaTeX template for my graduation thesis
 
 
