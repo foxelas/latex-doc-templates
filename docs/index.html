@@ -1,394 +1,94 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head lang="el">
-<link rel="shortcut icon" href="img/l.ico" type="image/x-icon"/>
-<TITLE>Foxelas's guide on how to study</TITLE>
-<META name="author" content="Template Creator: Julian Praest - joolean.io">
-<META name="editedby" content="Template adjustment: Elena - foxelas.github.io">
-<META name="copyright" content="Creative Commons BY-NC 4.0">
-<meta name="viewport" content="width=device-width, initial-scale=0.7">
+<head>
+	<!-- Use Mobile Menu -->
+	<script src="scripts/mobile_menu.js"></script>
 
-<style>
-@import 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i|Raleway:300,300i,600,600i|Alegreya+Sans:300i';
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Elena - foxelas.github.io">
+	<meta name="copyright" content="Creative Commons BY-NC 4.0">
+	<title>Foxelas's guide on how to study</title>
+	<link rel="shortcut icon" href="images/l.ico" type="image/x-icon" />
+	<link type="text/css" rel="stylesheet" href="stylesheets/main.css" />
+	<link type="text/css" rel="stylesheet" href="stylesheets/scrolling.css" />
 
-body {
-    background-image: linear-gradient(-34deg, #008080 7%, #008080 47%, #008080 100%);
-	border-radius: 0px;
-	overflow: hidden;
-    text-rendering: optimizeLegibility;
-}
-
-::selection {
-  background: #3C3C3C ; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: #3C3C3C ; /* Gecko Browsers */
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}
-
-section {
-    display: block;
-    position: absolute;
-}
-
-.wrapper {
-    display: block;
-    position: absolute;
-	overflow-y: auto;
-	overflow-x: hidden;
-	top: 5%;
-	bottom:5%;
-	width: 85%;
-	height: 80%;
-}
-
-#information {
-
-    left: 25%;
-    top: 5%;
-	width: 50%;
-    height: 100%;
-	word-wrap: normal;
-}
-
-#footer {
-	left: 0;
-	bottom: 2%;
-	width: 100%;
-	text-align: center;
-   
-   	font-family: 'Cormorant Garamond', serif;
-	font-style: italic;
-	font-size: 12px;
-	font-weight: 100 !important;
-	color: #FFF3F1 ;
-	letter-spacing: 0.5px;
-	line-height: 26px;
-}
-
-#photo {
-	background-image: url("photo.png");
-    background-size:contain;
-	position: absolute;
-	width: 600px;
-	height: 600px;
-	background-repeat: no-repeat;
-    left: -120px;
-    top: -150px;
-}
-
-#frameBorder {
-    border: 10px white solid;
-	left: 10px;
-    top: 10px;
-	right: 10px;
-	bottom: 10px;
-    position: absolute;	
-}
-
-#sm_links {
-    right: 5%;
-    top: 5%;
-}
-
-.sm_button {
-    margin-top: 10px;
-}
-
-a {
-	font-family: 'Raleway', sans-serif;
-    font-weight: 300!important;
-	letter-spacing: -0.02px;
-	color: #FFDB58 ;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-.bigLinks {	
-	font-size: 14px;
-}
-
-.smallLinks {	
-	font-size: 12px;
-}
-
-img { border: 0; }
-
-.delayedAppearance {           
-    -moz-animation-name: pageLoad;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-timing-function: ease-out;
-    -moz-animation-duration: 0.8s;
-    -moz-animation-delay: 0s;
-
-    -webkit-animation-name: pageLoad;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-out;
-    -webkit-animation-duration: 0.8s;
-    -webkit-animation-delay: 0s;
-
-    animation-name: pageLoad;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-out;
-    animation-duration: 0.8s;
-    animation-delay: 0s;
-}
-
-h1 {
-	font-family: 'Raleway', sans-serif;
-	font-size: 50px;
-	font-weight: 600 !important;
-	color: #FFFFFF;
-	letter-spacing: 1.9px;
-	margin-top: -20px;
-}
-
-h2 {
-	font-family: 'Cormorant Garamond', serif;
-	font-style: italic;
-	font-size: 18px;
-	font-weight: 100 !important;
-	color: #FFF3F1 ;
-	letter-spacing: 0.5px;
-	line-height: 26px;
-}
-
-h3 {
-	font-family: 'Raleway', sans-serif;
-	font-size: 24px;
-    font-weight: 300!important;
-	color: #FFFFFF;
-	letter-spacing: -0.02px;
-}
-
-hr {
-    background-color: white;
-    display: block;
-    margin: -25px 00px 50px ;
-    height: 3px;
-    width: 160px;
-    border: none;        
-}
-
-ul {
-    display: block;
-    position: fixed;
-}
-        
-@-moz-keyframes pageLoad {
-    0% {
-        -moz-transform: translateX(-150px);
-        opacity: 0;
-    }
-    100% {
-        -moz-transform: translateX(0);
-        opacity: 100;
-    }
-}
-@-webkit-keyframes pageLoad {
-    0% {
-        -webkit-transform: translateX(-150px);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateX(0);
-        opacity: 100;
-    }
-}
-@keyframes pageLoad {
-    0% {
-        transform: translateX(-150px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 100;
-    }
-}
-               
-@-moz-keyframes pageLoadButton {
-    0% {
-        opacity: 0;
-    }    70% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
-}
-@-webkit-keyframes pageLoadButton {
-    0% {
-        opacity: 0;
-    }    70% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
-}
-@keyframes pageLoadButton {
-    0% {
-        opacity: 0;
-    }
-    70% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 100;
-    }
-}
-
-@media screen and (max-width: 812px) {
-	.wrapper {
-		width: 80%;
-	}
-	#information {
-		left: 10%;
-		width: 70%;
-	}
-	.buttonContainer {
-		top: 75%;
-		left: 10%;
-		width: 80%;
-	}
-	#footer {
-		font-size: 8px;
-	}
-	.smallLinks 
-	{
-		font-size: 8px;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	h3 {
-		font-size: 20px;
-	}
-	.buttonContainer {
-		transform: scale(0.7);
-		height: 20%;
-	}
-	.buttons li {
-		width: 50%;
-	}
-}
-
-@media screen and (min-width: 481px) and (max-width: 812px) {
-	h3 {
-		font-size: 24px;
-	}
-	.buttonContainer {
-		height: 15%;
-	}
-	.buttons li {
-		width: 50%;
-	}
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1366px){
-	h3 {
-		font-size: 24px;
-	}
-	.buttonContainer {
-		top: 45%;
-	}
-}
-
-</style>
 </head>
+
 <body>
 
-<div id="photo"></div>
+	<div id="frameBorder"></div>
 
-<div id="frameBorder"></div>
+	<div class="wrapper">
+		<section id="scrollContainer" class="delayedAppearance">
+		  <h1 class="delayedAppearance">Guide on How to Study</h1>
+		  <hr class="delayedAppearance">
+		  <h3 class="delayedAppearance">
+			<dl>
+				<dt><h2>Bibliography management</h2></dt>
+				<dd><strong>Mendeley</strong> Allows export as Latex citation, has tools for highlighting on pdf, can create lists of publications</dd>
+				<dd><a href="https://www.mendeley.com/">Download at mendeley.com</a></dd>
+				<dt><h2>Text editor</h2></dt>
+				<dd><strong>Texmaker (Latex)</strong> Has good interactive environment</dd>
+				<dd><a href="https://www.xm1math.net/texmaker/">Download at xm1math.net/texmaker</a></dd>
+				<dd><strong>Miktex</strong> for package management</dd>
+				<dd><a href="https://miktex.org/download">Download at miktex.org/download</a></dd>
+				<dt><h2>Code management</h2></dt>
+				<dd><strong>GitHub</strong> for keeping and updating code versions</dd> 
+				<dd><a href="https://www.github.com">Access at github.com</a> &nbsp; &nbsp; <a href="http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf">GitHub Cheatsheet</a></dd>
+				<dt><h2>Search</h2></dt>
+				<dd><strong>Google scholar</strong> frequent use of the export citation as .bib format</dd> 
+				<dt><h2>Review</h2></dt>
+				<dd><strong>Wordcounter.io</strong> for counting words for abstracts etc</dd> 
+				<dd><a href="https://wordcounter.io">Access at wordcounter.io</a></dd>
+				<dd><strong>Thesaurus.com</strong> for finding synonyms, improving vocabulary</dd> 
+				<dd><a href="https://www.thesaurus.com/browse/search?s=t">Access at thesaurus.com</a></dd>
+			</dl>
+			</h3>
 
-<div class="wrapper">
-<section id="information" class="delayedAppearance">
-  <h1 class="delayedAppearance">Guide on How to Study</h1>
-  <hr class="delayedAppearance">
-  <h2 class="delayedAppearance">
-	<dl>
-		<dt><h3>Bibliography management</h3></dt>
-		<dd><strong>Mendeley</strong> Allows export as Latex citation, has tools for highlighting on pdf, can create lists of publications</dd>
-		<dd><a href="https://www.mendeley.com/">Download at mendeley.com</a></dd>
-		<dt><h3>Text editor</h3></dt>
-		<dd><strong>Texmaker (Latex)</strong> Has good interactive environment</dd>
-		<dd><a href="https://www.xm1math.net/texmaker/">Download at xm1math.net/texmaker</a></dd>
-		<dd><strong>Miktex</strong> for package management</dd>
-		<dd><a href="https://miktex.org/download">Download at miktex.org/download</a></dd>
-		<dt><h3>Code management</h3></dt>
-		<dd><strong>GitHub</strong> for keeping and updating code versions</dd> 
-		<dd><a href="https://www.github.com">Access at github.com</a> &nbsp; &nbsp; <a href="http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf">GitHub Cheatsheet</a></dd>
-		<dt><h3>Search</h3></dt>
-		<dd><strong>Google scholar</strong> frequent use of the export citation as .bib format</dd> 
-		<dt><h3>Review</h3></dt>
-		<dd><strong>Wordcounter.io</strong> for counting words for abstracts etc</dd> 
-		<dd><a href="https://wordcounter.io">Access at wordcounter.io</a></dd>
-		<dd><strong>Thesaurus.com</strong> for finding synonyms, improving vocabulary</dd> 
-		<dd><a href="https://www.thesaurus.com/browse/search?s=t">Access at thesaurus.com</a></dd>
-	</dl>
-	</h2>
-
-	<br>
-	
-	<h1 class="delayedAppearance">Workflow</h1>
-	<hr class="delayedAppearance">
-	<h2 class="delayedAppearance">
-		<dl>
-		  <dt><h3>Prepare To-do list</h3></dt>
-		  <dd>Update regularly with finished and new tasks</dd>
-		  <dd> Example &nbsp; <a href="todo.html">.pdf</a> 
-		  &nbsp; &nbsp;   <a href="https://github.com/foxelas/Graduation-Thesis-Template/raw/master/other/to-do-list/to_do_public.tex">.tex</a> </dd>		
-		  <dt><h3>Prepare a weekly report with questions and answers</h3></dt>
-		  <dd> Example &nbsp; <a href="report.html">.pdf</a> 
-		  &nbsp; &nbsp;   <a href="https://github.com/foxelas/Graduation-Thesis-Template/raw/master/other/report-class/report_public.tex">.tex</a>  &nbsp; &nbsp;   <a href="https://github.com/foxelas/Graduation-Thesis-Template/raw/master/other/report-class/foxelas_report.cls">.cls class</a> &nbsp; &nbsp;   <a href="https://github.com/foxelas/Graduation-Thesis-Template/raw/master/other/report-class/report_public.bib">.bib</a> </dd>	
-		  <dt><h3>Use a good thesis template</h3></dt>		
-		  <dd> Example &nbsp; <a href="thesis.html"> .pdf</a> 
-		  &nbsp; &nbsp;   <a href="https://github.com/foxelas/Graduation-Thesis-Template/archive/v1.0.zip">Full code </a></dt>
-		  <dd>Write everything down, with correct references, and use relevant parts for publications</dd>	
-		  <dt><h3>Use colors</h3></dt>
-		  <dd>Keep a notebook, write down shapes, ideas and new information with many colorful pens and highlighters, in order to help your brain trace information better. Write every new info together with paper author and year for later quick reference.</dd>			  
-		</dl>
-	</h2>
-	
-	<br>
-	<h1 class="delayedAppearance">Downloads</h1>
-	<hr class="delayedAppearance">
-	<h2 class="delayedAppearance">
-	<dl>You can download the related Latex templates from <a href="https://github.com/foxelas/Graduation-Thesis-Template">Github Repo</a></dl>
-	</h2>
-</section>
-</div> 
-
-<section class="delayedAppearance" id="footer">
-	<p>Built and maintained by <a class="smallLinks" href="https://foxelas.github.io" rel="noopener">foxelas</a>. Theme template by <a class="smallLinks" href="https://joolean.io" rel="noopener">Julian Praest</a>.</p>
-</section>
-
-<section id="sm_links">
-	<div class="sm_button">
-		<a href="https://github.com/foxelas" rel="noopener">
-		<img alt="my github profile" src="img/gh.png" width="60" height="60">
-		</a>
+			<br>
+			
+			<h1 class="delayedAppearance">Workflow</h1>
+			<hr class="delayedAppearance">
+			<h3 class="delayedAppearance">
+				<dl>
+				  <dt><h2>Prepare To-do list</h2></dt>
+				  <dd>Update regularly with finished and new tasks</dd>
+				  <dd> Example &nbsp; <a href="todo.html">.pdf</a> 
+				  &nbsp; &nbsp;   <a href="https://github.com/foxelas/Graduation-Thesis-Template/raw/master/other/to-do-list/to_do_public.tex">.tex</a> </dd>		
+				  <dt><h2>Prepare a weekly report with questions and answers</h2></dt>
+				  <dd> Example &nbsp;<a href="https://github.com/foxelas/Graduation-Thesis-Template/raw/master/other/report-class/report_public.pdf" role="presentation" rel="noopener">.pdf</a>
+				  &nbsp; &nbsp;   <a href="https://github.com/foxelas/Graduation-Thesis-Template/raw/master/other/report-class/report_public.tex">.tex</a>  &nbsp; &nbsp;   <a href="https://github.com/foxelas/Graduation-Thesis-Template/raw/master/other/report-class/foxelas_report.cls">.cls class</a> &nbsp; &nbsp;   <a href="https://github.com/foxelas/Graduation-Thesis-Template/raw/master/other/report-class/report_public.bib">.bib</a> </dd>	
+				  <dt><h2>Use a good thesis template</h2></dt>		
+				  <dd> Example &nbsp; <a href="thesis.html"> .pdf</a> 
+				  &nbsp; &nbsp;   <a href="https://github.com/foxelas/Graduation-Thesis-Template/archive/v1.0.zip">Full code </a></dt>
+				  <dd>Write everything down, with correct references, and use relevant parts for publications</dd>	
+				  <dt><h2>Use colors</h2></dt>
+				  <dd>Keep a notebook, write down shapes, ideas and new information with many colorful pens and highlighters, in order to help your brain trace information better. Write every new info together with paper author and year for later quick reference.</dd>			  
+				</dl>
+			</h3>
+			
+			<br>
+			<h1 class="delayedAppearance">Downloads</h1>
+			<hr class="delayedAppearance">
+			<h3 class="delayedAppearance">
+			<dl>You can download the related Latex templates from <a href="https://github.com/foxelas/Graduation-Thesis-Template">Github Repo</a></dl>
+			</h3>
+		</section>
 	</div>
-</section>
 
+	<section class="delayedAppearance" id="footer">
+		<p>Built and maintained by <a class="smallLinks" href="https://foxelas.github.io" rel="noopener">foxelas</a>.
+			Theme template by <a class="smallLinks" href="https://joolean.io" rel="noopener">Julian Praest</a>.</p>
+	</section>
 
+	<section id="sm_links">
+		<a href="https://github.com/foxelas" role="presentation" rel="noopener">
+			<button class="sm_button" id="gh_icon"></button></a>
+	</section>
 </body>
+
 </html>
