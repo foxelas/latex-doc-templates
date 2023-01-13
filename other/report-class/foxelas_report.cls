@@ -10,6 +10,9 @@
 
 \usepackage{graphicx} % Required for including images
 \graphicspath{{img/}} % Location of the graphics files
+\usepackage{comment}
+
+\usepackage{float} % to force figure positioning
 
 \usepackage[T1]{fontenc}
 \usepackage[margin=1in]{geometry}
@@ -23,6 +26,11 @@
 % \usepackage[article]{ragged2e} %defines new commands \Centering, \RaggedLeft, and \RaggedRight and new environments Center, FlushLeft, and FlushRight, which set ragged text and are easily configurable to allow hyphenation
 
 \usepackage{authblk} %redefines the \author command to work as normal or to allow a footnote style of author/affiliation input.
+
+%affiliations in single line 
+\makeatletter
+\renewcommand\AB@affilsepx{, \protect\Affilfont}
+\makeatother
 
 \usepackage[parfill]{parskip}
 \usepackage{titlesec} % an interface to sectioning commands
@@ -58,9 +66,32 @@
 \newcommand{\dq}[1]{{\color{Lavender}{\textbf{Quote}}}\textit{ #1}}
 
 
-\author[1]{Aloupogianni Eleni}
+%add icon for orcid id 
+\usepackage{academicons}
+\definecolor{orcidlogocol}{HTML}{A6CE39}
+%Needs xelatex 
+%\newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\aiOrcid}}}
+
+\usepackage{tikz}
+\DeclareRobustCommand{\orcidicon}{
+	\begin{tikzpicture}
+	\draw[orcidlogocol, fill=orcidlogocol] (0,0) 
+	circle [radius=0.16] 
+	node[white] {{\fontfamily{qag}\selectfont \tiny ID}};
+	\draw[white, fill=white] (-0.0625,0.095) 
+	circle [radius=0.007];
+	\end{tikzpicture}
+	\hspace{-2mm}
+}
+
+\foreach \x in {A, ..., Z}{\expandafter\xdef\csname orcid\x\endcsname{\noexpand\href{https://orcid.org/\csname orcidauthor\x\endcsname}
+			{\noexpand\orcidicon}}
+}
+
+\newcommand{\orcidauthorA}{0000-0000-0000-0000} % For author A
+
+\author[1]{Author A \orcidA{}}
 \affil[1]{Tokyo Institute of Technology}
 \date{\today}
 
 
-\usepackage{float} % to force figure positioning
