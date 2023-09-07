@@ -2069,9 +2069,10 @@ FUNCTION {book}
   format.volume output
   format.number output
   format.isbn output %% GQMJr
+  format.doi output
   format.note output
-  format.url output
-  format.urldate output
+  %format.url output
+  %format.urldate output
   fin.entry
   if.url.std.interword.spacing
 }
