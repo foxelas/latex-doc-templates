@@ -6,12 +6,10 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Additions by foxelas  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\usepackage{balance} 
 
 \usepackage{graphicx} % Required for including images
 \graphicspath{{img/}} % Location of the graphics files
-\usepackage{comment}
-
 
 \usepackage{float} % to force figure positioning
 
@@ -50,6 +48,7 @@
 
 \usepackage{amsmath}
 
+%\usepackage{caption}
 
 %\usepackage{underscore}
 
@@ -64,12 +63,16 @@
 \usepackage{url}
 \def\UrlBreaks{\do\/\do-}
 
-\usepackage[breaklinks, colorlinks = true,
-            linkcolor = Periwinkle,
-            urlcolor  = Periwinkle,
-            citecolor = Periwinkle,
-            anchorcolor = Periwinkle]{hyperref} %produce hypertext links
-            
+\usepackage[breaklinks, 
+			%colorlinks = true,
+            %linkcolor = Periwinkle,
+            %urlcolor  = Periwinkle,
+            %citecolor = Periwinkle,
+            %anchorcolor = Periwinkle
+            ]{hyperref} %produce hypertext links
+\usepackage{comment}
+\usepackage[author={Elena}]{pdfcomment}
+  
 \newcommand{\chk}[1]{{\color{BrickRed}{\textbf{Check:} #1}}}
 \newcommand{\rmv}[1]{{\color{NavyBlue}{\textbf{Remove:} #1}}}
 \newcommand{\rf}{{\color{ForestGreen}{\textbf{Ref}}}}
@@ -88,7 +91,7 @@
 
 
 
-\title{(Tentative) A Digital Twin Framework for Traffic Monitoring in Singapore 
+\title{(Tentative) ERERE 
 %*\\ 
 %{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and should not be used}
 %\thanks{Identify applicable funding agency here. If none, delete this.}
@@ -150,6 +153,12 @@ component, formatting, style, styling, insert
 \section{Introduction}
 \subsection{Context}
 \par Citation as \cite{UserManual}.
+
+\par You can add pdf comments. Here we\pdfcomment[color=red,icon=Insert]{insert: miss} a word!
+You can do much more \pdfmarkupcomment[markup=Squiggly,color=green]{with pdfcomment}{move to the front}.
+This is a \pdfmarkupcomment[markup=StrikeOut,color=red]{stupid}{replace stupid with funny}  game!
+\pdfmarkupcomment[markup=Highlight,color=yellow]{Of course, you can highlight complete sentences.}{Highlight}
+This is very\pdfcomment[icon=Note,color=blue]{insert graphic!} interesting!
 
 \par \blindtext
 
